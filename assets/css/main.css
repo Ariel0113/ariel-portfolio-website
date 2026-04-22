@@ -1791,6 +1791,13 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio-details .portfolio-description img,
+.portfolio-details .col-lg-6 > img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+}
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 700;
