@@ -734,6 +734,10 @@ section,
   color: var(--heading-color);
 }
 
+.hero-name-mobile {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .hero .content h2 {
     font-size: 2.5rem;
@@ -2223,4 +2227,82 @@ section,
   background-color: var(--soft-accent);
   border-color: var(--accent-color);
   color: var(--heading-color);
+}
+
+/*--------------------------------------------------------------
+# Responsive Fixes (Mobile)
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Hero title: break before Ariel Chen on mobile */
+  .hero-name-mobile {
+    display: inline;
+  }
+
+  /* About personal info: prevent long values like email from overflowing */
+  .about .personal-info .info-item .value {
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Hero stats wrap on small screens */
+  .hero .hero-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  /* Contact profile card: stack image and info vertically */
+  .contact-profile-card .d-flex.align-items-center.gap-4 {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  /* Contact stat numbers: allow wrapping */
+  .contact-stat-num {
+    font-size: 0.78rem;
+    word-break: keep-all;
+  }
+
+  /* Contact profile card padding */
+  .contact-profile-card {
+    padding: 20px;
+  }
+
+  /* Services left column padding */
+  .services .col-lg-4.mb-5 {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* About section title: allow wrapping */
+  .section-title p {
+    white-space: normal;
+  }
+
+  /* Resume timeline: reduce padding */
+  .resume .resume-wrapper .timeline .timeline-item .timeline-left {
+    padding-left: 2rem;
+  }
+
+  .resume .resume-wrapper .timeline .timeline-item .timeline-right {
+    padding-left: 2rem;
+  }
+
+  /* Contact info items: prevent overflow */
+  .contact .contact-info .info-item span {
+    word-break: break-all;
+  }
+
+  /* Contact section columns: full width on mobile */
+  .contact .col-lg-5,
+  .contact .col-lg-7 {
+    width: 100%;
+  }
 }
