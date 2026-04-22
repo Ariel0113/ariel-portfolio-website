@@ -734,10 +734,6 @@ section,
   color: var(--heading-color);
 }
 
-.hero-name-mobile {
-  display: none;
-}
-
 @media (max-width: 991px) {
   .hero .content h2 {
     font-size: 2.5rem;
@@ -2237,12 +2233,6 @@ section,
     padding-left: 24px;
     padding-right: 24px;
   }
-
-  /* Hero title: break before Ariel Chen on mobile */
-  .hero-name-mobile {
-    display: inline;
-  }
-
   /* About personal info: prevent long values like email from overflowing */
   .about .personal-info .info-item .value {
     word-break: break-all;
